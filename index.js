@@ -1,9 +1,9 @@
 var express = require("express");
 var path = require("path");
+require("dotenv").config();
 var bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
 
-require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
 var fs = require("fs");
 var template = fs.readFileSync("./Email.html", "utf-8");

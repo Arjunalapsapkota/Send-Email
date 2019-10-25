@@ -12,7 +12,9 @@ $(document).ready(function() {
     var Regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     console.log(Regex.test(email));
     if (Regex.test(email))
-      $.post("http://localhost:3000/send", { email: email }, function(data) {
+      $.post("https://sendomail.herokuapp.com/send", { email: email }, function(
+        data
+      ) {
         $("#email").val("");
         messagesent();
       });
