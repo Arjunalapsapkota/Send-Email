@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
